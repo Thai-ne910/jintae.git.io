@@ -7,11 +7,24 @@
 </head>
 <body>
     <div class="app">
-        <h1>📝 Task Manager</h1>
+        <h1>📋 Task Manager</h1>
+
         <div class="task-input">
-            <input type="text" id="taskInput" placeholder="Nhập nhiệm vụ mới..." />
+            <input type="text" id="taskInput" placeholder="Nhập nhiệm vụ..." />
+            <select id="priority">
+                <option value="Thấp">Thấp</option>
+                <option value="Trung bình">Trung bình</option>
+                <option value="Cao">Cao</option>
+            </select>
             <button id="addTask">Thêm</button>
         </div>
+
+        <div class="filters">
+            <button data-filter="all" class="filter-btn active">Tất cả</button>
+            <button data-filter="completed" class="filter-btn">Hoàn thành</button>
+            <button data-filter="incomplete" class="filter-btn">Chưa hoàn thành</button>
+        </div>
+
         <ul id="taskList"></ul>
     </div>
     <script src="script.js"></script>
